@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[126]:
-
-
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
@@ -40,17 +34,9 @@ for href in hrefs_list:
     
     records.append((name, capital, ceo))
 
-
-# In[127]:
-
-
 dataframe_reuters = pd.DataFrame(records, columns=['Nom', 'Capital (Milliers de $)', 'CEO'])
 dataframe_reuters.to_csv('TD_Reuters.csv', index = False, encoding = 'utf-8')
 dataframe_reuters
-
-
-# In[ ]:
-
 
 
 
